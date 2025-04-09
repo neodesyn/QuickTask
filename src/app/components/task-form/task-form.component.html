@@ -1,0 +1,9 @@
+
+  <form [formGroup]="taskForm" (ngSubmit)="addTask()" class="d-flex mb-3">
+    <input type="text" formControlName="taskName" class="form-control me-2" placeholder="Enter task..." />
+    <button type="submit" class="btn btn-success" [disabled]="taskForm.invalid">Add Task</button>
+  </form>
+  <p class="text-danger" *ngIf="taskForm.controls['taskName'].invalid && taskForm.controls['taskName'].touched">
+    Task name is required!
+  </p>
+  

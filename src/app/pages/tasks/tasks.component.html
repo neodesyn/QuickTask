@@ -1,0 +1,20 @@
+<!-- <div class="container mt-4">
+    <h2 class="text-center">Task Manager</h2>
+  
+    Task Form
+    <app-task-form></app-task-form>
+  
+    <!-- Task List 
+    <app-task-list></app-task-list>
+  </div>-->
+
+
+  <div class="container mt-4">
+    <h2 class="text-center">Task Manager</h2>
+  
+    <!-- Task Form -->
+    <app-task-form (taskAdded)="addTask($event)"></app-task-form>
+  
+    <!-- Task List -->
+    <app-task-list [tasks]="tasks"></app-task-list>
+  </div>
